@@ -26,23 +26,27 @@ li a {
 }
 
 body {
-    background-color: #dce4c0;
+    background-color: #D6D5DB;
+    display: grid;
+
 }
 
-body h1 {
+h1 {
     margin-top: 30px;
     text-align: center;
     text-transform: uppercase;
     font-size: 60px;
     font-family: Lato, sans-serif;
+    color: #204416;
 }
 
-body h2 {
+h2 {
     text-align: center;
-    font-size: 20px;
+    font-size: 25px;
     font-family: Sanchez, sans-serif;
     text-transform: uppercase;
     font-weight: 1;
+    color: #204416
 }
 
 .info1 {
@@ -53,6 +57,7 @@ body h2 {
     align-items: flex-end;
     margin-right: 110px;
     margin-top: 130px;
+    color: black;
 }
 
 
@@ -64,86 +69,179 @@ body h2 {
     align-items: flex-start;
     margin-left: 110px;
     margin-top: -104px;
+    color: black;
+}
+
+#logo {
+    width: 200px;
+    height: 200px;
+    background-color: #204416;
+    border-radius: 50%;
+    margin: auto;
+    margin-top: -160px;
 }
 
 .topimg {
-    height: 260px;
+    display: flex;
+    height: 60px;
     width: 1300px;
-    background-color: lightgrey;
     margin: auto;
     margin-top: 85px;
+    justify-content: space-around;
 }
+
+.topimg h2 {
+    color: black;
+    margin: 20px;
+}
+
+#iconcontainer {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 100px;
+}
+
+#iconcontainer h2 {
+    margin-bottom: 10px;
+}
+
+.steps {
+    width: 100px;
+    height: 300px;
+
+}
+
+.icon {
+    height: 35%;
+}
+
+#cursor {
+    margin-left: 20px;
+}
+
+.nav2 {
+    display: flex;
+    align-items: center;
+}
+
 
 .cards {
     display: flex;
     flex-wrap: wrap;
     width: 600px;
     margin-left: 250px;
-    margin-top: 220px;
 }
 
 .starter,
 .main,
 .sideDish,
 .dessert,
-.veg,
 .drink {
     margin-top: 10px;
     margin-right: 10px;
     width: 200px;
     height: 90px;
-    background-color: pink;
+    background-color: #2F4D1F;
 }
 
 .cards h1 {
     font-family: Michroma, sans-serif;
     font-size: 20px;
+    color: white;
 }
 
 .bestSell {
-    position: absolute;
-    background-color: antiquewhite;
-    width: 500px;
+    background-color: #90B1BA;
+    width: 420px;
     height: 570px;
-    right: 150px;
-    top: 830px;
 }
 
 .bestSell h1 {
+    color: white;
     font-size: 40px;
 }
 
+.bestSell h2 {
+    color: white;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 50%;
+    margin-bottom: 40px;
+    margin-right: 160px;
+    margin-left: 160px;
+
+}
+
+.bestSell h3 {
+    font-family: Lato, sans-serif;
+    text-transform: uppercase;
+    font-size: 26px;
+    text-align: left;
+    border-bottom: solid;
+    width: 250px;
+    margin: auto;
+}
+
 .menu {
+    display: flex;
+    flex-direction: column;
     margin-top: 260px;
     margin-left: 80px;
 }
 
 .menu h1 {
-    text-align: left;
     font-size: 30px;
-    margin-top:60px;
-
-}
-
-.menucard {
-    display: flex;
-    width: 300px;
-    height: 350px;
-    background-color: #ffffff;
-    margin: 10px;
+    margin-top: 60px;
+    color: black;
 }
 
 .startermenu,
 .mainmenu,
 .sidedishmenu,
 .dessertmenu,
-.vegmenu,
 .drinkmenu {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
+.startermenu>h1,
+.mainmenu>h1,
+.sidedishmenu>h1,
+.dessertmenu>h1,
+.drinkmenu>h1 {
+    grid-row: 1/-1;
+}
+
+.menucard img {
+    margin: 10px;
+    height: 50%;
+    width: 93%;
+    opacity: 80%;
 }
 
 footer {
     height: 100px;
-    background-color: darkgreen;
+    background-color: black;
     margin-top: 100px;
+}
+
+/* PHONE SIZE - MEDIA QUERY */
+@media only screen and (max-width: 599px) {
+
+    .logo {
+        width: 140px;
+        height: 140px;
+    }
+
+    .info1,
+    .info2 {
+        font-size: 10px;
+        width: 300px;
+    }
 }

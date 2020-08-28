@@ -7,21 +7,24 @@
     <link rel="stylesheet" href="style.css">
     <title>ZUZUZU Copenhagen</title>
     <link rel="stylesheet" href="">
-
-    <nav>
-        <ul>
-            <li><a href="default.asp">Home</a></li>
-            <li><a href="news.asp">News</a></li>
-            <li><a href="contact.asp">Contact</a></li>
-            <li><a href="about.asp">About</a></li>
-        </ul>
-    </nav>
-
 </head>
 
 <body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="default.asp">Home</a></li>
+                <li><a href="news.asp">Menu</a></li>
+                <li><a href="contact.asp">Contact</a></li>
+                <li><a href="about.asp">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="startName">
     <h1>ZUZUZU</h1>
     <h2>Copenhagen</h2>
+        </div>
 
     <div class="info1">
         <p>Værnedamsvej 5</p>
@@ -31,15 +34,33 @@
     </div>
 
     <div class="info2">
-        <p>Værnedamsvej 5</p>
-        <p>1619 København</p>
-        <p>+45 10 20 30 40</p>
-        <p>zuzuzu@contact.com</p>
+        <p>Baltic dishes / </p>
+        <p>Enjoy at restaurant</p>
+        <p>or order takeaway!</p>
+        <p></p>
     </div>
 
-    <div class="topimg">
+    <div id="logo"></div>
+
+    <div id="iconcontainer">
+        <div class="steps">
+            <h2>order</h2>
+            <img class="icon" id="cursor" src="images/icons/cursor.png">
+        </div>
+
+        <div class="steps">
+            <h2>wait</h2>
+            <img class="icon" src="images/icons/clock.png">
+        </div>
+
+        <div class="steps">
+            <h2>enjoy</h2>
+            <img class="icon" src="images/icons/bag.png">
+        </div>
     </div>
 
+
+    <section class="nav2">
     <div class="cards">
         <div class="starter">
             <h1>Starter</h1>
@@ -53,67 +74,49 @@
         <div class="dessert">
             <h1>Dessert</h1>
         </div>
-        <div class="veg">
-            <h1>Veg</h1>
-        </div>
         <div class="drink">
             <h1>Drink</h1>
         </div>
     </div>
 
     <div class="bestSell">
-        <h1>Best Sellers</h1>
-    </div>
+        <h1>zuzuzu</h1>
+        <h2>copenhagen</h2>
+        <div class="circle"></div>
+        <h3>Best-Sellers</h3>
+        </div>
+        </section>
+
     <div class="menu">
         <div class="startermenu">
             <h1>Starter</h1>
-            <div class="menucard"></div>
-            <div class="menucard"></div>
-            <div class="menucard"></div>
-            <div class="menucard"></div>
         </div>
 
         <div class="mainmenu">
             <h1>main</h1>
-             <div class="menucard"></div>
-             <div class="menucard"></div>
-             <div class="menucard"></div>
-             <div class="menucard"></div>
         </div>
 
         <div class="sidedishmenu">
             <h1>Side Dish</h1>
-             <div class="menucard"></div>
-             <div class="menucard"></div>
-             <div class="menucard"></div>
-             <div class="menucard"></div>
         </div>
 
         <div class="dessertmenu">
             <h1>Dessert</h1>
-             <div class="menucard"></div>
-             <div class="menucard"></div>
-             <div class="menucard"></div>
-             <div class="menucard"></div>
         </div>
 
-        <div class="vegmenu">
-            <h1>Veg</h1>
-             <div class="menucard"></div>
-             <div class="menucard"></div>
-             <div class="menucard"></div>
-             <div class="menucard"></div>
-
-        </div>
         <div class="drinkmenu">
             <h1>Drink</h1>
-             <div class="menucard"></div>
-             <div class="menucard"></div>
-             <div class="menucard"></div>
-             <div class="menucard"></div>
         </div>
     </div>
 
-<footer></footer>
-    <script src=""></script>
+    <template id="dish">
+        <div class="menucard">
+            <h1 id="name"></h1>
+            <h2 id="price"></h2>
+            <img src="images/starter/ringbroed-md.jpg">
+        </div>
+    </template>
+
+    <footer></footer>
+    <script src="script.js"></script>
 </body></html>

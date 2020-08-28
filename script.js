@@ -1,49 +1,3 @@
-const dishes = [{
-        "name": "Burger",
-        "price": 100,
-},
-    {
-        "name": "Burger",
-        "price": 100,
-},
-    {
-        "name": "Burger",
-        "price": 100,
-},
-    {
-        "name": "Burger",
-        "price": 100,
-},
-    {
-        "name": "Burger",
-        "price": 100,
-}
-]
-
-dishes.forEach(displayDishes);
-
-function displayDishes(dish) {
-    {
-        // CHOOSE THE TEMPLATE
-        //Step 1: Choose the <template> content
-        const templateElement = document.querySelector("#dish").content;
-
-        //Step 2: Make a clone
-        const myClone = templateElement.cloneNode(true);
-
-        //Step 3: Change the content
-        myClone.querySelector("#name").textContent += dish.name;
-
-        //Step 4: Choose the new "parent" element
-        const parentElement = document.querySelector(".startermenu");
-
-        //Step 5: Add (Append) the clone to the DOM
-        parentElement.appendChild(myClone);
-    }
-
-}
-
-
 // fetch data
 fetch("https://kea-alt-del.dk/t5/api/productlist")
     .then(function (response) {
@@ -52,15 +6,49 @@ fetch("https://kea-alt-del.dk/t5/api/productlist")
     })
 
     .then(function (data) {
-    console.log(data)
-})
+        console.log(data)
+        getData(data);
+    })
 
 //loop through products
+function getData(dishes) {
+    dishes.forEach(addDish);
+}
+
+//images
+const base = "https://kea-alt-del.dk/t5/site/imgs/";
 
 //finding the template
+function addDish(dish) {
+    const myTemplate = document.querySelector("#dish").content;
 
-//clone the template
+    //clone the template
+    const cloneDish = myTemplate.cloneNode(true);
 
-//fill out the template
 
-//append
+    //fill out the template
+    cloneDish.querySelector("#name").textContent = dish.name;
+    cloneDish.querySelector("#pic").src = base + "small/" + dish.image + "-sm.jpg";
+    cloneDish.querySelector("#price").textContent = dish.price;
+    cloneDish.querySelector("#des1").textContent = dish.shortdescription;
+
+
+    //append
+    const ParentDishStarter = document.querySelector("section.startermenu");
+    const ParentDishMain = document.querySelector("section.mainmenu");
+    const ParentDishSideDish = document.querySelector("section.sidedishmenu");
+    const ParentDishDessert = document.querySelector("section.dessertmenu");
+    const ParentDishDrink = document.querySelector("section.drinkmenu");
+
+    if(dish.category == "starter")
+        ParentDishStarter.appendChild(cloneDish);
+    else if(dish.category == "main")
+        ParentDishMain.appendChild(cloneDish);
+    else if(dish.category =="sideorders")
+        ParentDishSideDish.appendChild(cloneDish);
+    else if(dish.category == "dessert")
+        ParentDishDessert.appendChild(cloneDish);
+    else
+        ParentDishDrink.appendChild(cloneDish);
+
+}

@@ -29,7 +29,18 @@ function addDish(dish) {
     //fill out the template
     cloneDish.querySelector("#name").textContent = dish.name;
     cloneDish.querySelector("#pic").src = base + "small/" + dish.image + "-sm.jpg";
-    cloneDish.querySelector("#price").textContent = dish.price;
+    cloneDish.querySelector("#price").textContent = dish.price + "kr";
+
+    //discount
+    if (dish.discount) {
+        cloneDish.querySelector("#price").style.textDecoration="line-through";
+        cloneDish.querySelector("#discount").textContent = dish.price - (dish.price * dish.discount / 100) + "kr";
+    }
+
+    else {
+        cloneDish.querySelector("#discount").style.display = "none";
+    }
+
     cloneDish.querySelector("#des1").textContent = dish.shortdescription;
 
 
@@ -52,3 +63,4 @@ function addDish(dish) {
         ParentDishDrink.appendChild(cloneDish);
 
 }
+

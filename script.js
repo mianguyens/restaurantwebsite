@@ -34,6 +34,7 @@ function addDish(dish) {
     //discount
     if (dish.discount) {
         cloneDish.querySelector("#price").style.textDecoration="line-through";
+        cloneDish.querySelector("#price").style.color="rgba(0,0,0,0.5)"
         cloneDish.querySelector("#discount").textContent = dish.price - (dish.price * dish.discount / 100) + "kr";
     }
 
@@ -42,6 +43,12 @@ function addDish(dish) {
     }
 
     cloneDish.querySelector("#des1").textContent = dish.shortdescription;
+
+    //sold out
+    if (dish.soldout) {
+        cloneDish.querySelector("#soldout").style.display = "block";
+        cloneDish.querySelector("#pic").style.filter = "grayscale(100%)";
+    }
 
 
     //append
@@ -61,6 +68,5 @@ function addDish(dish) {
         ParentDishDessert.appendChild(cloneDish);
     else
         ParentDishDrink.appendChild(cloneDish);
-
 }
 

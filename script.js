@@ -50,6 +50,11 @@ function addDish(dish) {
         cloneDish.querySelector("#pic").style.filter = "grayscale(100%)";
     }
 
+    //vegetarian
+    if (dish.vegetarian) {
+        cloneDish.querySelector("#vegetarian").style.display = "block";
+    }
+
 
     //append
     const ParentDishStarter = document.querySelector("section.startermenu");
@@ -58,6 +63,8 @@ function addDish(dish) {
     const ParentDishDessert = document.querySelector("section.dessertmenu");
     const ParentDishDrink = document.querySelector("section.drinkmenu");
 
+
+    // categories
     if(dish.category == "starter")
         ParentDishStarter.appendChild(cloneDish);
     else if(dish.category == "main")
@@ -68,5 +75,6 @@ function addDish(dish) {
         ParentDishDessert.appendChild(cloneDish);
     else
         ParentDishDrink.appendChild(cloneDish);
+
 }
 

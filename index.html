@@ -3,95 +3,58 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,900&family=Michroma&family=Sanchez&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
+
     <title>ZUZUZU Copenhagen</title>
-    <link rel="stylesheet" href="">
 </head>
 
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="default.asp">Home</a></li>
-                <li><a href="news.asp">Menu</a></li>
-                <li><a href="contact.asp">Contact</a></li>
-                <li><a href="about.asp">About</a></li>
+                <li><a href="">Home</a></li>
+                <li><a href="">Menu</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="">About</a></li>
             </ul>
+            <div class="startname">
+                <h1>zuzuzu</h1>
+                <h2>CPH</h2>
+            </div>
         </nav>
     </header>
+    <img id="headerimg" src="https://images.unsplash.com/photo-1592276154414-2989cfaa6f93?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1867&q=80">
 
-<img id="headerimg" src="https://images.unsplash.com/photo-1592276154414-2989cfaa6f93?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1867&q=80">
+    <section id=welcome>
+        <div id="iconcontainer">
+            <div class="steps">
+                <h2>order</h2>
+                <img class="icon" id="cursor" src="images/icons/cursor.png">
+            </div>
 
-    <div class="startName">
-    <h1>ZUZUZU</h1>
-    <h2>Copenhagen</h2>
-        </div>
+            <div class="steps">
+                <h2>wait</h2>
+                <img class="icon" src="images/icons/clock.png">
+            </div>
 
-    <div class="info1">
-        <p>Værnedamsvej 5</p>
-        <p>1619 København</p>
-        <p>+45 10 20 30 40</p>
-        <p>zuzuzu@contact.com</p>
-    </div>
+            <div class="steps">
+                <h2>enjoy</h2>
+                <img class="icon" src="images/icons/bag.png">
+            </div>
+        </div>
+    </section>
 
-    <div class="info2">
-        <p>Baltic dishes / </p>
-        <p>Enjoy at restaurant</p>
-        <p>or order takeaway!</p>
-        <p></p>
-    </div>
-
-    <div id="logo"></div>
-
-    <div id="iconcontainer">
-        <div class="steps">
-            <h2>order</h2>
-            <img class="icon" id="cursor" src="images/icons/cursor.png">
-        </div>
-
-        <div class="steps">
-            <h2>wait</h2>
-            <img class="icon" src="images/icons/clock.png">
-        </div>
-
-        <div class="steps">
-            <h2>enjoy</h2>
-            <img class="icon" src="images/icons/bag.png">
-        </div>
-    </div>
-
-
-    <section class="nav2">
-    <div class="cards">
-        <div class="starter">
-            <h1>Starter</h1>
-        </div>
-        <div class="main">
-            <h1>Main</h1>
-        </div>
-        <div class="sideDish">
-            <h1>Side Dish</h1>
-        </div>
-        <div class="dessert">
-            <h1>Dessert</h1>
-        </div>
-        <div class="drink">
-            <h1>Drink</h1>
-        </div>
-        </div>
-
-    <div class="bestSell">
-        <h1>zuzuzu</h1>
-        <h2>copenhagen</h2>
-        <div class="circle"></div>
-        <h3>Best-Sellers</h3>
-        <p>Russian Ringbread</p>
-        <p>Zygroffs farmers plate</p>
-        <p>Pavlova with melon</p>
-        </div>
-        </section>
+    <details>
+        <summary>Filters</summary>
+        <button id="veggiefilter">Veggie dishes</button>
+        <button id="alcoholfilter">Non-alcoholic dishes</button>
+    </details>
 
     <div class="menu">
         <section class="startermenu">
@@ -115,9 +78,6 @@
         </section>
     </div>
 
-    <div id="overlay">
-    </div>
-
     <template id="dish">
         <div class="menucard">
             <div id="topline"></div>
@@ -125,13 +85,16 @@
             <img id="pic" src="">
             <p id="des1"></p>
             <div class="pricecontainer">
-            <h2 id="price"></h2>
-            <p id="discount"></p>
-                </div>
-            <div class="buy">
-            <p>ADD TO BAG</p>
+                <h2 id="price"></h2>
+                <p id="discount"></p>
+            </div>
+
+            <div class="buydetailscon">
+                <button>See details</button>
+                <p>+ ADD TO BAG</p>
             </div>
             <p id="soldout">Sold out</p>
+          <img id="vegetarian" src="https://clipartix.com/wp-content/uploads/2018/03/spinach-clipart-2018-2.jpg">
         </div>
     </template>
 
